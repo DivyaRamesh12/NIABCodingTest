@@ -38,8 +38,9 @@ public class Harvestcontroller {
                System.out.println("val"+values);
                List<String> cropList = new ArrayList();
                 List<Integer> percentageList = new ArrayList();
+                Harvest harvest = new Harvest();
                for(int i=1;i<values.length;i++){
-                   Harvest harvest = new Harvest();
+
                    harvest.setCounty(values[0]);
                    if(i%2!=0){
                        cropList.add(values[i]);
@@ -51,7 +52,9 @@ public class Harvestcontroller {
                    harvest.setCropList(cropList);
                    harvest.setPercentageList(percentageList);
                    System.out.println("val"+ values[i]);
+
                }
+                list.add(harvest);
                 //records.add(Arrays.asList(values));
             }
 
