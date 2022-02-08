@@ -43,7 +43,9 @@ public class Harvestcontroller {
 
                    harvest.setCounty(values[0]);
                    if(i%2!=0){
-                       cropList.add(values[i]);
+                       Harvestcontroller con = new Harvestcontroller();
+                       HashMap<String,String> cropCodeList = con.cropCodeList();
+                       cropList.add(cropCodeList.get( values[i]));
 
                    }else{
                        int per = Integer.parseInt(values[i]);
